@@ -25,8 +25,8 @@ RUN apk update \
 
 # Install .NET Core SDK
 ENV DOTNET_SDK_VERSION 2.0.0-preview1-005977
-#ENV DOTNET_SDK_DOWNLOAD_URL https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-dev-linux-x64.$DOTNET_SDK_VERSION.tar.gz
-ENV DOTNET_SDK_DOWNLOAD_URL https://download.microsoft.com/download/0/6/5/0656B047-5F2F-4281-A851-F30776F8616D/dotnet-dev-linux-x64.$DOTNET_SDK_VERSION.tar.gz
+ENV DOTNET_SDK_DOWNLOAD_URL https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-dev-linux-x64.$DOTNET_SDK_VERSION.tar.gz
+#ENV DOTNET_SDK_DOWNLOAD_URL https://download.microsoft.com/download/0/6/5/0656B047-5F2F-4281-A851-F30776F8616D/dotnet-dev-linux-x64.$DOTNET_SDK_VERSION.tar.gz
 
 RUN curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz \
 	&& mkdir -p /usr/share/dotnet \
